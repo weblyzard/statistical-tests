@@ -29,7 +29,7 @@ DELETE:
 
 In order to test the API it is enough to simply run the same commands that are included in the API together with a set of files that are known to respect / not respect the specification.
 
-To run the tests simply run the following bash scripts: (test_server)[https://github.com/weblyzard/statistical-tests/blob/master/scripts/test_server.sh]
+To run the tests simply run the following bash scripts: [test_server](https://github.com/weblyzard/statistical-tests/blob/master/scripts/test_server.sh)
 
 It contains the following tests:
 
