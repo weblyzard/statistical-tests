@@ -1,0 +1,8 @@
+{
+        "uri": "http://example.com/test-uri-01",
+        "added_date": "2014-09-10T15:01:48.623816",
+        "date": "2004-01-01T00:00:00",
+        "indicator_id": "ES Air Trans",
+        "value": "9950314",
+        "testerror": "unexpected"
+}

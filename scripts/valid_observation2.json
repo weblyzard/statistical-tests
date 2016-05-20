@@ -1,0 +1,21 @@
+{
+        "_id": "2",
+        "uri": "http://example.com/test-uri-02",
+        "added_date": "2014-09-10T15:01:48.623816",
+        "date": "2005-01-01T00:00:00",
+        "indicator_id": "esairtrans",
+        "indicator_name": "ES Air Trans",
+        "value": "1000",
+        "year": "1982",
+        "target_country": "NZ",
+        "target_type": "country",
+        "target_location": [
+            {
+             "name": "New Zealand",
+             "point": {
+                 "lat": "-42",
+                 "lon": "174"
+                 }
+             }
+       ]
+}
