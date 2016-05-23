@@ -4,14 +4,11 @@ To obtain a token for the user, do a
 
     curl -u test@weblyzard:demo https://api.weblyzard.com/0.2/token
 
-
 With that token, the following operations are possible
-
 
 ADD:
 
     curl -H 'Authorization: Bearer <token>' -d @observation.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/<indicator-id>
-
 
 RETRIEVE:
 
@@ -27,9 +24,13 @@ DELETE:
     
 ## TESTS
 
-In order to test the API it is enough to simply run the same commands that are included in the API together with a set of files that are known to respect / not respect the specification.
+In order to test the API it is enough to simply run the same commands that are included in the API together with a set of files that are known to follow / not follow the specification.
 
 To run the tests simply run the following bash scripts: [test_server](https://github.com/weblyzard/statistical-tests/blob/master/scripts/test_server.sh)
+
+Do not forget to change the permission of the script previously:
+        
+    sudo chmod u+x pathToScript/test_server.sh
 
 It contains the following tests:
 
@@ -43,3 +44,6 @@ It contains the following tests:
 
 5) DELETE test - 1 example
 
+## IF ALL TESTS FAIL
+
+Please let us know. This generally happens when the deployed backend and frontend versions do not correspond. Generally all tests are changed to correspond to a certain version of the backend API.
