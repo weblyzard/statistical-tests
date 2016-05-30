@@ -18,6 +18,7 @@ curl -H "$auth" -H "Content-Type: application/json" -X POST --data @valid_observ
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @valid_observation3.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 
 #INVALID POSTS
+curl -H "$auth" -H "Content-Type: application/json" -X POST --data @invalid_observation.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @invalid_observation2.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 
 #PUT
