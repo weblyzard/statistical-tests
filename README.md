@@ -34,16 +34,40 @@ Do not forget to change the permission of the script previously:
 
 It contains the following tests:
 
-1) POST validation - 3 examples (valid_observation.json, valid_observation2.json, valid_observation3.json)
+#### POST validation 
 
-2) invalid POST - 1 example (invalid_observation2.json)
+3 examples (valid_observation.json, valid_observation2.json, valid_observation3.json) are availalbe due to the fact that one can upload JSON files that contain observations with different fields. The webLyzard API defines a set of required and optional fields.
 
-3) PUT test - 1 example (update_observation.json)
+The first example (valid_observation.json) only contains required fields: *id*, *uri*, *added_date* (indexing date), *date* (observation/document date), *indicator_id*, *indicator_name*, *value*).
 
-4) GET test - 1 example
+Some examples of optional fields are presented in the next example (valid_observation2.json): target_country, target_type, target_location, etc.
 
-5) DELETE test - 1 example
+The last example is somewhat similar to the first example.
 
-## IF ALL TESTS FAIL
+All these examples are expected to pass!
+
+#### invalid POST 
+
+2 examples (invalid_observation.json, invalid_observation2.json) are available in order to highlight various types of errors.
+
+In the first example a fictional field (field that does not exists in the required or optional sets of fields described in the webLyzard API) named *testerror* is defined which will make this test fail.
+
+The second example is expected to fail, as the *id* of the observation is missing.
+
+#### PUT test 
+
+The current example (update_observation.json) corresponds to an UPDATE statement.
+
+The expected output is a value of 2000 instead of 1000 for the first observation (id=1).
+
+#### GET test 
+
+This test simply returns the data for a single observation.
+
+#### DELETE test
+
+This test simply deletes the data for a single observation.
+
+## WHAT TO DO IF ALL TESTS FAIL
 
 Please let us know. This generally happens when the deployed backend and frontend versions do not correspond. Generally all tests are changed to correspond to a certain version of the backend API.
