@@ -12,15 +12,21 @@ test_token='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJwZXJtaXNzaW9ucyI6WyJjb20ud2V
 auth="Authorization: Bearer "$test_token
 
 #curl -X GET $server_url/$api_version/status
-
+#VALID POSTS
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @valid_observation.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @valid_observation2.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @valid_observation3.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
+
+#INVALID POSTS
+curl -H "$auth" -H "Content-Type: application/json" -X POST --data @invalid_observation.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 curl -H "$auth" -H "Content-Type: application/json" -X POST --data @invalid_observation2.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2
 
+#PUT
 curl -H "$auth" -H "Content-Type: application/json" -X PUT --data @update_observation.json https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans/1
 
+#GET
 curl -H "$auth" -X GET https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2/1
 
+#DELETE
 curl  -H "$auth" -X DELETE https://api.weblyzard.com/0.2/observations/weblyzard.com/test/esairtrans2/1
 
