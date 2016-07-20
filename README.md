@@ -22,7 +22,13 @@ DELETE:
 
     curl -H 'Authorization: Bearer <token>' -XDELETE https://api.weblyzard.com/0.2/observations/weblyzard.com/test/<indicator-id>/<observation-id>
     
-## TESTS
+    
+## ADDING DATA TO WEBLYZARD REPOSITORIES
+    
+Please check the following link.
+    
+    
+## STATISTICAL TESTS
 
 In order to test the API it is enough to simply run the same commands that are included in the API together with a set of files that are known to follow / not follow the specification.
 
